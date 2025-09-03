@@ -1,0 +1,106 @@
+.inspector {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--spacing-4);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-2) 0;
+  color: var(--foreground);
+}
+
+.blockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.blockType {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: capitalize;
+}
+
+.blockId {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-family-monospace);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: var(--spacing-6);
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-3) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.field {
+  margin-bottom: var(--spacing-3);
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  margin: 0;
+}
+
+.placeholder {
+  color: var(--muted-foreground);
+  font-style: italic;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: var(--spacing-4);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: var(--spacing-6);
+}
+
+.emptyText {
+  color: var(--muted-foreground);
+  margin: var(--spacing-2) 0 0 0;
+}

@@ -1,0 +1,99 @@
+.container {
+  padding: var(--spacing-8);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.itemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.navItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.dragHandle {
+  color: var(--muted-foreground);
+  cursor: grab;
+  padding-top: calc(var(--spacing-2) + 1.5rem); /* Align with inputs */
+}
+
+.itemFields {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.formItem {
+  margin-bottom: 0;
+}
+
+.itemActions {
+  display: flex;
+  gap: var(--spacing-1);
+  padding-top: calc(var(--spacing-2) + 1.5rem); /* Align with inputs */
+}
+
+.stateMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted-foreground);
+  gap: var(--spacing-4);
+  padding: var(--spacing-12) 0;
+  height: 100%;
+}
+
+.stateMessage h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.errorIcon {
+  color: var(--error);
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.skeletonItem {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius-md);
+}

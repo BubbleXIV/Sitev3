@@ -1,0 +1,200 @@
+.editorLayout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.editorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  height: 60px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex: 1;
+}
+
+.titleInput {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  max-width: 400px;
+}
+
+.titleInput:focus {
+  background-color: var(--card);
+  border: 1px solid var(--primary);
+}
+
+.unsavedIndicator {
+  font-size: 0.75rem;
+  color: var(--warning);
+  font-weight: 500;
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: color-mix(in srgb, var(--warning) 10%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.editorBody {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.leftPanel,
+.rightPanel {
+  width: 280px;
+  background-color: var(--sidebar);
+  padding: var(--spacing-4);
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.rightPanel {
+  width: 320px;
+  border-right: none;
+  border-left: 1px solid var(--border);
+}
+
+.canvas {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--brushed-metal-background);
+  overflow: hidden;
+}
+
+.canvasHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-6);
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.canvasTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.canvasActions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.canvasContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-6);
+}
+
+.emptyCanvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--muted-foreground);
+}
+
+.emptyCanvas h3 {
+  font-family: var(--font-family-heading);
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.blockList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loadingState,
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: var(--spacing-4);
+  color: var(--muted-foreground);
+}
+
+.errorState h2 {
+  font-family: var(--font-family-heading);
+  color: var(--foreground);
+  margin: 0;
+}
+
+.errorState p {
+  margin: 0;
+  max-width: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .leftPanel,
+  .rightPanel {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .leftPanel,
+  .rightPanel {
+    width: 200px;
+  }
+  
+  .canvasContent {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .editorBody {
+    flex-direction: column;
+  }
+  
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    height: 200px;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .rightPanel {
+    border-top: 1px solid var(--border);
+    border-bottom: none;
+  }
+  
+  .canvas {
+    flex: 1;
+    min-height: 400px;
+  }
+}

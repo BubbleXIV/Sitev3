@@ -1,0 +1,236 @@
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-4);
+  text-shadow: 0 2px 10px color-mix(in srgb, var(--primary), transparent 70%);
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.content {
+  /* Content area styles */
+}
+
+.sectionTitle {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-8);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--primary);
+  display: inline-block;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-8);
+}
+
+.filters button {
+  background-color: var(--surface);
+  color: var(--muted-foreground);
+  border: 1px solid var(--border);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filters button:hover {
+  background-color: var(--muted);
+  color: var(--foreground);
+}
+
+.filters button.activeFilter {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+/* Schedule Grid */
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.dayTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  color: var(--primary);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.performancesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* Performance Card */
+.performanceCard {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.performanceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.performerAvatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+}
+
+.headerText {
+  flex-grow: 1;
+}
+
+.performanceTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  color: var(--surface-foreground);
+  margin: 0;
+}
+
+.performerName {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  margin: var(--spacing-1) 0 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.cardBody {
+  /* Body styles */
+}
+
+.performanceTime {
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: var(--spacing-3);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.performanceDescription {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.specialNotes {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3);
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  border-left: 3px solid var(--primary);
+}
+
+/* Special Performances */
+.specialSection {
+  margin-bottom: var(--spacing-12);
+}
+
+.specialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-8);
+}
+
+/* States */
+.errorState,
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  min-height: 300px;
+  grid-column: 1 / -1;
+}
+
+.errorIcon {
+  color: var(--error);
+  margin-bottom: var(--spacing-6);
+}
+
+.errorTitle,
+.emptyTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.75rem;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.errorMessage,
+.emptyMessage {
+  color: var(--muted-foreground);
+  max-width: 450px;
+}
+
+/* Skeleton */
+.skeletonCard {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  border: 1px solid var(--border);
+}

@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+  background-color: var(--surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius);
+}
+
+.previewImage {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.filename {
+  font-weight: 500;
+  color: var(--surface-foreground);
+  word-break: break-all;
+}

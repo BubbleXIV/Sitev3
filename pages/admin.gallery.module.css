@@ -1,0 +1,139 @@
+.container {
+  padding: var(--spacing-8);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  color: var(--foreground);
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.categoryCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-4);
+}
+
+.categoryTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.categoryDescription {
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-1);
+  font-size: 0.9rem;
+}
+
+.categoryActions {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.photoItem {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--animation-duration-normal) ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: var(--spacing-2);
+}
+
+.photoItem:hover .photoOverlay {
+  opacity: 1;
+}
+
+.photoTitle {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photoSkeleton {
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.stateMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--muted-foreground);
+  gap: var(--spacing-4);
+  padding: var(--spacing-12) 0;
+  height: 100%;
+}
+
+.stateMessage h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.errorIcon {
+  color: var(--error);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-4);
+}

@@ -1,0 +1,87 @@
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+  position: relative;
+  margin-bottom: var(--spacing-4);
+  display: inline-block;
+  align-self: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--primary), transparent 60%);
+}
+
+.altIcon {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: var(--radius-full);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--card);
+}
+
+.cardContent {
+  flex-grow: 1;
+}
+
+.name {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.role {
+  color: var(--primary);
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: var(--spacing-4);
+}
+
+.bio {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  min-height: 6.5em; /* Reserve space for ~4 lines of bio */
+}
+
+.cardFooter {
+  margin-top: var(--spacing-6);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.altCounter {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  font-variant-numeric: tabular-nums;
+}
