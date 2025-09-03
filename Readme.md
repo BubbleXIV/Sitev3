@@ -99,7 +99,6 @@ The theme must always be brushed black metal with black → dark gray gradient a
 The footer must always have exactly three editable social icons Twitter Bluesky Discord
 The navigation bar must auto-update with published pages and allow manual sorting
 
-Made with Floot.
 
 # Instructions
 
